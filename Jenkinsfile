@@ -20,6 +20,14 @@ pipeline{
 
 			}
 		}
+  		
+		stage('post build artifacts achive'){
+		     steps{ 
+ 			archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false 	
+			} 
+		
+   
+     		}
 	}
 
 }
